@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66D0D0C8F4F61DCE163DB38A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE10A0F1B03B9D6B4E5578C /* libPods.a */; };
+		DA7FB8931ABE16FF004A6FFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8921ABE16FF004A6FFA /* main.m */; };
+		DA7FB8961ABE16FF004A6FFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8951ABE16FF004A6FFA /* AppDelegate.m */; };
+		DA7FB8991ABE16FF004A6FFA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8981ABE16FF004A6FFA /* MainViewController.m */; };
+		DA7FB89C1ABE16FF004A6FFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA7FB89A1ABE16FF004A6FFA /* Main.storyboard */; };
+		DA7FB89E1ABE16FF004A6FFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7FB89D1ABE16FF004A6FFA /* Images.xcassets */; };
+		DA7FB8AD1ABE16FF004A6FFA /* e_sante_hackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8AC1ABE16FF004A6FFA /* e_sante_hackTests.m */; };
+		DA7FB8B81ABE2E32004A6FFA /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8B71ABE2E32004A6FFA /* MenuTableViewController.m */; };
+		DA7FB8BC1ABE39DC004A6FFA /* OurProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8BB1ABE39DC004A6FFA /* OurProductViewController.m */; };
+		DA7FB8BF1ABE3EC5004A6FFA /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8BE1ABE3EC5004A6FFA /* MenuTableViewCell.m */; };
+		DA7FB8E11ABE41AC004A6FFA /* logo_novartis@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7FB8E01ABE41AC004A6FFA /* logo_novartis@3x.png */; };
+		DA7FB8E31ABE42DB004A6FFA /* logo_novartis@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7FB8E21ABE42DB004A6FFA /* logo_novartis@2x.png */; };
+		DA7FB8E61ABEFA12004A6FFA /* PrefixHeader.pch in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8E41ABEF905004A6FFA /* PrefixHeader.pch */; };
+		DA7FB8E91ABF02FB004A6FFA /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8E81ABF02FB004A6FFA /* CommonViewController.m */; };
+		DA7FB8EC1ABF07D3004A6FFA /* hamburger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7FB8EA1ABF07D3004A6FFA /* hamburger@2x.png */; };
+		DA7FB8ED1ABF07D3004A6FFA /* hamburger@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7FB8EB1ABF07D3004A6FFA /* hamburger@3x.png */; };
+		DA7FB8F01ABF0861004A6FFA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA7FB8A71ABE16FF004A6FFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA7FB8851ABE16FF004A6FFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA7FB88C1ABE16FF004A6FFA;
+			remoteInfo = "e-sante-hack";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAE10A0F1B03B9D6B4E5578C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCEC0ED5DA487577BAF3A8D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DA7FB88D1ABE16FF004A6FFA /* e-sante-hack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-sante-hack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA7FB8911ABE16FF004A6FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA7FB8921ABE16FF004A6FFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA7FB8941ABE16FF004A6FFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA7FB8951ABE16FF004A6FFA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA7FB8971ABE16FF004A6FFA /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		DA7FB8981ABE16FF004A6FFA /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		DA7FB89B1ABE16FF004A6FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA7FB89D1ABE16FF004A6FFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DA7FB8A61ABE16FF004A6FFA /* e-sante-hackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "e-sante-hackTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA7FB8AB1ABE16FF004A6FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA7FB8AC1ABE16FF004A6FFA /* e_sante_hackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = e_sante_hackTests.m; sourceTree = "<group>"; };
+		DA7FB8B61ABE2E32004A6FFA /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		DA7FB8B71ABE2E32004A6FFA /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		DA7FB8BA1ABE39DC004A6FFA /* OurProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OurProductViewController.h; sourceTree = "<group>"; };
+		DA7FB8BB1ABE39DC004A6FFA /* OurProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OurProductViewController.m; sourceTree = "<group>"; };
+		DA7FB8BD1ABE3EC5004A6FFA /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
+		DA7FB8BE1ABE3EC5004A6FFA /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		DA7FB8E01ABE41AC004A6FFA /* logo_novartis@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_novartis@3x.png"; sourceTree = "<group>"; };
+		DA7FB8E21ABE42DB004A6FFA /* logo_novartis@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_novartis@2x.png"; sourceTree = "<group>"; };
+		DA7FB8E41ABEF905004A6FFA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DA7FB8E51ABEF97C004A6FFA /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DA7FB8E71ABF02FB004A6FFA /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
+		DA7FB8E81ABF02FB004A6FFA /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
+		DA7FB8EA1ABF07D3004A6FFA /* hamburger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburger@2x.png"; sourceTree = "<group>"; };
+		DA7FB8EB1ABF07D3004A6FFA /* hamburger@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburger@3x.png"; sourceTree = "<group>"; };
+		DA7FB8EE1ABF0861004A6FFA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E571C38B21B52D61025D9BA1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA7FB88A1ABE16FF004A6FFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D0D0C8F4F61DCE163DB38A /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA7FB8A31ABE16FF004A6FFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62F398B331E6961358B7DAB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCEC0ED5DA487577BAF3A8D8 /* Pods.debug.xcconfig */,
+				E571C38B21B52D61025D9BA1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C6F6924A680946A470B8F147 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAE10A0F1B03B9D6B4E5578C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA7FB8841ABE16FF004A6FFA = {
+			isa = PBXGroup;
+			children = (
+				DA7FB88F1ABE16FF004A6FFA /* e-sante-hack */,
+				DA7FB8A91ABE16FF004A6FFA /* e-sante-hackTests */,
+				DA7FB88E1ABE16FF004A6FFA /* Products */,
+				62F398B331E6961358B7DAB0 /* Pods */,
+				C6F6924A680946A470B8F147 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DA7FB88E1ABE16FF004A6FFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA7FB88D1ABE16FF004A6FFA /* e-sante-hack.app */,
+				DA7FB8A61ABE16FF004A6FFA /* e-sante-hackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA7FB88F1ABE16FF004A6FFA /* e-sante-hack */ = {
+			isa = PBXGroup;
+			children = (
+				DA7FB8B91ABE2E4B004A6FFA /* controllers */,
+				DA7FB89A1ABE16FF004A6FFA /* Main.storyboard */,
+				DA7FB8901ABE16FF004A6FFA /* Supporting Files */,
+				DA7FB8DF1ABE41AC004A6FFA /* images */,
+			);
+			path = "e-sante-hack";
+			sourceTree = "<group>";
+		};
+		DA7FB8901ABE16FF004A6FFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA7FB8941ABE16FF004A6FFA /* AppDelegate.h */,
+				DA7FB8951ABE16FF004A6FFA /* AppDelegate.m */,
+				DA7FB89D1ABE16FF004A6FFA /* Images.xcassets */,
+				DA7FB8911ABE16FF004A6FFA /* Info.plist */,
+				DA7FB8921ABE16FF004A6FFA /* main.m */,
+				DA7FB8E41ABEF905004A6FFA /* PrefixHeader.pch */,
+				DA7FB8E51ABEF97C004A6FFA /* Constants.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA7FB8A91ABE16FF004A6FFA /* e-sante-hackTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA7FB8AC1ABE16FF004A6FFA /* e_sante_hackTests.m */,
+				DA7FB8AA1ABE16FF004A6FFA /* Supporting Files */,
+			);
+			path = "e-sante-hackTests";
+			sourceTree = "<group>";
+		};
+		DA7FB8AA1ABE16FF004A6FFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA7FB8AB1ABE16FF004A6FFA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA7FB8B91ABE2E4B004A6FFA /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA7FB8971ABE16FF004A6FFA /* MainViewController.h */,
+				DA7FB8981ABE16FF004A6FFA /* MainViewController.m */,
+				DA7FB8B61ABE2E32004A6FFA /* MenuTableViewController.h */,
+				DA7FB8B71ABE2E32004A6FFA /* MenuTableViewController.m */,
+				DA7FB8BA1ABE39DC004A6FFA /* OurProductViewController.h */,
+				DA7FB8BB1ABE39DC004A6FFA /* OurProductViewController.m */,
+				DA7FB8BD1ABE3EC5004A6FFA /* MenuTableViewCell.h */,
+				DA7FB8BE1ABE3EC5004A6FFA /* MenuTableViewCell.m */,
+				DA7FB8E71ABF02FB004A6FFA /* CommonViewController.h */,
+				DA7FB8E81ABF02FB004A6FFA /* CommonViewController.m */,
+				DA7FB8EE1ABF0861004A6FFA /* HomeViewController.h */,
+				DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		DA7FB8DF1ABE41AC004A6FFA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DA7FB8EA1ABF07D3004A6FFA /* hamburger@2x.png */,
+				DA7FB8EB1ABF07D3004A6FFA /* hamburger@3x.png */,
+				DA7FB8E21ABE42DB004A6FFA /* logo_novartis@2x.png */,
+				DA7FB8E01ABE41AC004A6FFA /* logo_novartis@3x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA7FB88C1ABE16FF004A6FFA /* e-sante-hack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA7FB8B01ABE16FF004A6FFA /* Build configuration list for PBXNativeTarget "e-sante-hack" */;
+			buildPhases = (
+				89077CEA3CB0F9C79FEFE6BF /* Check Pods Manifest.lock */,
+				DA7FB8891ABE16FF004A6FFA /* Sources */,
+				DA7FB88A1ABE16FF004A6FFA /* Frameworks */,
+				DA7FB88B1ABE16FF004A6FFA /* Resources */,
+				E6ADB499EEDCB14B8831C2B5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "e-sante-hack";
+			productName = "e-sante-hack";
+			productReference = DA7FB88D1ABE16FF004A6FFA /* e-sante-hack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA7FB8A51ABE16FF004A6FFA /* e-sante-hackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA7FB8B31ABE16FF004A6FFA /* Build configuration list for PBXNativeTarget "e-sante-hackTests" */;
+			buildPhases = (
+				DA7FB8A21ABE16FF004A6FFA /* Sources */,
+				DA7FB8A31ABE16FF004A6FFA /* Frameworks */,
+				DA7FB8A41ABE16FF004A6FFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA7FB8A81ABE16FF004A6FFA /* PBXTargetDependency */,
+			);
+			name = "e-sante-hackTests";
+			productName = "e-sante-hackTests";
+			productReference = DA7FB8A61ABE16FF004A6FFA /* e-sante-hackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA7FB8851ABE16FF004A6FFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = solumobile;
+				TargetAttributes = {
+					DA7FB88C1ABE16FF004A6FFA = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					DA7FB8A51ABE16FF004A6FFA = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = DA7FB88C1ABE16FF004A6FFA;
+					};
+				};
+			};
+			buildConfigurationList = DA7FB8881ABE16FF004A6FFA /* Build configuration list for PBXProject "e-sante-hack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA7FB8841ABE16FF004A6FFA;
+			productRefGroup = DA7FB88E1ABE16FF004A6FFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA7FB88C1ABE16FF004A6FFA /* e-sante-hack */,
+				DA7FB8A51ABE16FF004A6FFA /* e-sante-hackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA7FB88B1ABE16FF004A6FFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA7FB8E11ABE41AC004A6FFA /* logo_novartis@3x.png in Resources */,
+				DA7FB8EC1ABF07D3004A6FFA /* hamburger@2x.png in Resources */,
+				DA7FB89C1ABE16FF004A6FFA /* Main.storyboard in Resources */,
+				DA7FB8ED1ABF07D3004A6FFA /* hamburger@3x.png in Resources */,
+				DA7FB8E31ABE42DB004A6FFA /* logo_novartis@2x.png in Resources */,
+				DA7FB89E1ABE16FF004A6FFA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA7FB8A41ABE16FF004A6FFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89077CEA3CB0F9C79FEFE6BF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6ADB499EEDCB14B8831C2B5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA7FB8891ABE16FF004A6FFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA7FB8E61ABEFA12004A6FFA /* PrefixHeader.pch in Sources */,
+				DA7FB8E91ABF02FB004A6FFA /* CommonViewController.m in Sources */,
+				DA7FB8BC1ABE39DC004A6FFA /* OurProductViewController.m in Sources */,
+				DA7FB8B81ABE2E32004A6FFA /* MenuTableViewController.m in Sources */,
+				DA7FB8991ABE16FF004A6FFA /* MainViewController.m in Sources */,
+				DA7FB8F01ABF0861004A6FFA /* HomeViewController.m in Sources */,
+				DA7FB8961ABE16FF004A6FFA /* AppDelegate.m in Sources */,
+				DA7FB8BF1ABE3EC5004A6FFA /* MenuTableViewCell.m in Sources */,
+				DA7FB8931ABE16FF004A6FFA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA7FB8A21ABE16FF004A6FFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA7FB8AD1ABE16FF004A6FFA /* e_sante_hackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA7FB8A81ABE16FF004A6FFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA7FB88C1ABE16FF004A6FFA /* e-sante-hack */;
+			targetProxy = DA7FB8A71ABE16FF004A6FFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA7FB89A1ABE16FF004A6FFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA7FB89B1ABE16FF004A6FFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA7FB8AE1ABE16FF004A6FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DA7FB8AF1ABE16FF004A6FFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA7FB8B11ABE16FF004A6FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCEC0ED5DA487577BAF3A8D8 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "e-sante-hack/PrefixHeader.pch";
+				INFOPLIST_FILE = "e-sante-hack/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA7FB8B21ABE16FF004A6FFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E571C38B21B52D61025D9BA1 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "e-sante-hack/PrefixHeader.pch";
+				INFOPLIST_FILE = "e-sante-hack/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DA7FB8B41ABE16FF004A6FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "e-sante-hackTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/e-sante-hack.app/e-sante-hack";
+			};
+			name = Debug;
+		};
+		DA7FB8B51ABE16FF004A6FFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "e-sante-hackTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/e-sante-hack.app/e-sante-hack";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA7FB8881ABE16FF004A6FFA /* Build configuration list for PBXProject "e-sante-hack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA7FB8AE1ABE16FF004A6FFA /* Debug */,
+				DA7FB8AF1ABE16FF004A6FFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA7FB8B01ABE16FF004A6FFA /* Build configuration list for PBXNativeTarget "e-sante-hack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA7FB8B11ABE16FF004A6FFA /* Debug */,
+				DA7FB8B21ABE16FF004A6FFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA7FB8B31ABE16FF004A6FFA /* Build configuration list for PBXNativeTarget "e-sante-hackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA7FB8B41ABE16FF004A6FFA /* Debug */,
+				DA7FB8B51ABE16FF004A6FFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA7FB8851ABE16FF004A6FFA /* Project object */;
+}
