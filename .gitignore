@@ -30,3 +30,5 @@ DerivedData
 postmortem autolayout.rtf
 
 .idea/*
+e-sante-nodeapp/node_modules
+e-sante-nodeapp/bower_components
