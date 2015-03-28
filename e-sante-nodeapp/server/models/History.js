@@ -14,7 +14,7 @@ var schema = new mongoose.Schema({
     updated_at: Date
 });
 
-schema.statics.getPoints = function (callback) {
+schema.statics.getDatas = function (callback) {
     var points = [];
 
     History.find(function (err, docs) {
