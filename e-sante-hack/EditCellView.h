@@ -12,6 +12,7 @@
 
 -(void) didValidatePicker:(NSDate*) date forIndexPath:(NSIndexPath*) indexPath;
 
+
 @end
 
 @interface EditCellView : UITableViewCell<UITextFieldDelegate>
@@ -20,5 +21,7 @@
 @property (strong, nonatomic) NSIndexPath *indexPath;
 
 @property (strong, nonatomic) id<ValidatePickerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 
 @end

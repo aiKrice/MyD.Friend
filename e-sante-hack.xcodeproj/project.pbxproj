@@ -16,6 +16,7 @@
 		DA2748871AC6E44C00A5D136 /* EditCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2748861AC6E44C00A5D136 /* EditCellView.m */; };
 		DA27488B1AC6F1BB00A5D136 /* LabelPickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2748891AC6F1BB00A5D136 /* LabelPickerTableViewCell.m */; };
 		DA27488C1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA27488A1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib */; };
+		DA27488F1AC727D500A5D136 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA27488E1AC727D500A5D136 /* HealthKit.framework */; };
 		DA7D1E6B1AC60A3200C0E083 /* MaCommunaute.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */; };
 		DA7D1E6F1AC611A800C0E083 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7D1E6D1AC611A800C0E083 /* login@2x.png */; };
 		DA7D1E701AC611A800C0E083 /* login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7D1E6E1AC611A800C0E083 /* login@3x.png */; };
@@ -79,6 +80,8 @@
 		DA2748881AC6F1BB00A5D136 /* LabelPickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelPickerTableViewCell.h; sourceTree = "<group>"; };
 		DA2748891AC6F1BB00A5D136 /* LabelPickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelPickerTableViewCell.m; sourceTree = "<group>"; };
 		DA27488A1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelPickerTableViewCell.xib; sourceTree = "<group>"; };
+		DA27488D1AC727D500A5D136 /* e-sante-hack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "e-sante-hack.entitlements"; sourceTree = "<group>"; };
+		DA27488E1AC727D500A5D136 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		DA7D1E691AC60A3200C0E083 /* MaCommunaute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaCommunaute.h; sourceTree = "<group>"; };
 		DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaCommunaute.m; sourceTree = "<group>"; };
 		DA7D1E6D1AC611A800C0E083 /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D0D0C8F4F61DCE163DB38A /* libPods.a in Frameworks */,
+				DA27488F1AC727D500A5D136 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +168,7 @@
 		C6F6924A680946A470B8F147 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA27488E1AC727D500A5D136 /* HealthKit.framework */,
 				BAE10A0F1B03B9D6B4E5578C /* libPods.a */,
 			);
 			name = Frameworks;
@@ -243,6 +248,7 @@
 		DA7FB88F1ABE16FF004A6FFA /* e-sante-hack */ = {
 			isa = PBXGroup;
 			children = (
+				DA27488D1AC727D500A5D136 /* e-sante-hack.entitlements */,
 				DA27487A1AC6DCD000A5D136 /* categories */,
 				DA7FB8B91ABE2E4B004A6FFA /* controllers */,
 				DA7D1E851AC6AA6800C0E083 /* Utils.h */,
@@ -290,6 +296,7 @@
 			children = (
 				DA7D1E6C1AC60AE600C0E083 /* menu */,
 				DA7D1E991AC6C9C200C0E083 /* Accessibility */,
+				DA2748791AC6DC0500A5D136 /* accompagnement */,
 				DA7FB8BA1ABE39DC004A6FFA /* OurProductViewController.h */,
 				DA7FB8BB1ABE39DC004A6FFA /* OurProductViewController.m */,
 				DA7FB8E71ABF02FB004A6FFA /* CommonViewController.h */,
@@ -298,7 +305,6 @@
 				DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */,
 				DA7D1E691AC60A3200C0E083 /* MaCommunaute.h */,
 				DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */,
-				DA2748791AC6DC0500A5D136 /* accompagnement */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -380,6 +386,12 @@
 				TargetAttributes = {
 					DA7FB88C1ABE16FF004A6FFA = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = HLTQMHS4VR;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					DA7FB8A51ABE16FF004A6FFA = {
 						CreatedOnToolsVersion = 6.2;
@@ -618,11 +630,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "e-sante-hack/e-sante-hack.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "e-sante-hack/PrefixHeader.pch";
 				INFOPLIST_FILE = "e-sante-hack/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -632,11 +648,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "e-sante-hack/e-sante-hack.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "e-sante-hack/PrefixHeader.pch";
 				INFOPLIST_FILE = "e-sante-hack/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

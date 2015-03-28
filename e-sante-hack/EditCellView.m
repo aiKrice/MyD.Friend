@@ -10,7 +10,7 @@
 
 @interface EditCellView()
 
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 
 @end
 
@@ -32,5 +32,10 @@
 	self.textField.placeholder = placeholderText;
 }
 
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+	[textField resignFirstResponder];
+	return YES;
+}
 
 @end

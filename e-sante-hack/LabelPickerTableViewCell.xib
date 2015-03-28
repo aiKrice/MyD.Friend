@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29 mars 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngV-rI-CzJ">
-                        <rect key="frame" x="195" y="11" width="117" height="20"/>
+                        <rect key="frame" x="195" y="11" width="117" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -33,12 +33,9 @@
                 <constraints>
                     <constraint firstItem="ngV-rI-CzJ" firstAttribute="leading" secondItem="JEH-DL-aJH" secondAttribute="trailing" constant="16" id="Edo-3x-87o"/>
                     <constraint firstAttribute="trailing" secondItem="ngV-rI-CzJ" secondAttribute="trailing" constant="8" id="Upm-Z6-EP8"/>
-                    <constraint firstItem="JEH-DL-aJH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="Xjd-zP-cv5"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="JEH-DL-aJH" secondAttribute="bottom" constant="3" id="Ykz-pG-Qeg"/>
+                    <constraint firstAttribute="centerY" secondItem="ngV-rI-CzJ" secondAttribute="centerY" constant="0.5" id="d22-52-WzJ"/>
                     <constraint firstAttribute="centerY" secondItem="JEH-DL-aJH" secondAttribute="centerY" constant="-0.5" id="fY2-U2-Ija"/>
-                    <constraint firstItem="ngV-rI-CzJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="hh7-69-vGg"/>
                     <constraint firstItem="JEH-DL-aJH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="mG3-vn-Rcw"/>
-                    <constraint firstAttribute="bottom" secondItem="ngV-rI-CzJ" secondAttribute="bottom" constant="12" id="zIe-Xx-aRb"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

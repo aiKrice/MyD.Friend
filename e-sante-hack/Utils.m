@@ -29,4 +29,20 @@
 	}
 }
 
++(void) displayNotification:(NSDate*) date withMessage:(NSString*) message sender:(id) sender userInfo:(NSDictionary*) info{
+	UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+	localNotification.userInfo = info;
+	localNotification.fireDate = date;
+	localNotification.alertBody = message;
+	localNotification.soundName = UILocalNotificationDefaultSoundName;
+	localNotification.timeZone = [NSTimeZone defaultTimeZone];
+	localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+	
+	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+	
+	// Request to reload table view data
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:sender];
+
+}
+
 @end

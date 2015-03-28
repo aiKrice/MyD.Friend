@@ -10,6 +10,7 @@
 
 @interface Utils : NSObject
 
-+(void)play:(NSString*)name;
++(void) play:(NSString*)name;
++(void) displayNotification:(NSDate*) date withMessage:(NSString*) message sender:(id) sender userInfo:(NSDictionary*) info;
 
 @end

@@ -36,6 +36,8 @@
 	
 	self.tableview.delegate = self;
 	self.tableview.dataSource = self;
+	
+	self.navigationItem.title = [@"Accompagnement" uppercaseString];
 
 }
 
@@ -75,8 +77,9 @@
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 	LabelPickerTableViewCell* cellPicker;
 	EditCellView *cell;
-	if (indexPath.row == 4 || indexPath.row == 5){
+	if (indexPath.row == 5){
 		cellPicker = [tableView dequeueReusableCellWithIdentifier:@"LabelPickerTableViewCell" forIndexPath:indexPath];
+		return cellPicker;
 	} else {
 		cell = [tableView dequeueReusableCellWithIdentifier:@"EditCellView" forIndexPath:indexPath];
 	}
@@ -170,11 +173,30 @@
 					 }];
 	
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-	[formatter setDateFormat:@"yyyyMMdd HHmmss"];
+	[formatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
 	
 	NSString *stringFromDate = [formatter stringFromDate:self.datePicker.date];
 	LabelPickerTableViewCell *cell = (LabelPickerTableViewCell*)[self.tableview cellForRowAtIndexPath:self.currentIndexPath];
 	cell.dateRdv = stringFromDate;
+	
+	NSString *string;
+	NSIndexPath *index;
+	if (self.currentIndexPath.section == 3){
+		
+		
+		index = [NSIndexPath indexPathForRow:0 inSection:2];
+		EditCellView *cell = (EditCellView*) [self.tableview cellForRowAtIndexPath:index];
+		
+		string = [@"Vous avez un rendez chez votre médecin traitement Le Dr." stringByAppendingString:cell.textField.text];
+	} else {
+		index = [NSIndexPath indexPathForRow:0 inSection:3];
+		EditCellView *cell = (EditCellView*) [self.tableview cellForRowAtIndexPath:index];
+		
+		string = [@"Vous avez un rendez chez votre médecin traitement Le Dr." stringByAppendingString:cell.textField.text];
+	}
+	
+	[Utils displayNotification:[[NSDate date] dateByAddingTimeInterval:10] withMessage:@"Vous avez un rendez chez" sender:self userInfo:@{@"type":@"rdv", @"message":@"veuillez saisir un nouveau RDV"}];
+	
 	
 }
 @end
