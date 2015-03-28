@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		66D0D0C8F4F61DCE163DB38A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE10A0F1B03B9D6B4E5578C /* libPods.a */; };
+		DA2748781AC6D74C00A5D136 /* AccompagnementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2748771AC6D74C00A5D136 /* AccompagnementViewController.m */; };
+		DA27487D1AC6DCFC00A5D136 /* UIView+esante.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27487C1AC6DCFC00A5D136 /* UIView+esante.m */; };
+		DA2748801AC6DD7600A5D136 /* HeaderAccompagnementView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27487F1AC6DD7600A5D136 /* HeaderAccompagnementView.m */; };
+		DA2748821AC6DEC200A5D136 /* HeaderAccompagnementView~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA2748811AC6DEC200A5D136 /* HeaderAccompagnementView~iphone.xib */; };
+		DA2748841AC6E28600A5D136 /* EditCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA2748831AC6E28600A5D136 /* EditCellView.xib */; };
+		DA2748871AC6E44C00A5D136 /* EditCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2748861AC6E44C00A5D136 /* EditCellView.m */; };
+		DA27488B1AC6F1BB00A5D136 /* LabelPickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2748891AC6F1BB00A5D136 /* LabelPickerTableViewCell.m */; };
+		DA27488C1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA27488A1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib */; };
 		DA7D1E6B1AC60A3200C0E083 /* MaCommunaute.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */; };
 		DA7D1E6F1AC611A800C0E083 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7D1E6D1AC611A800C0E083 /* login@2x.png */; };
 		DA7D1E701AC611A800C0E083 /* login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7D1E6E1AC611A800C0E083 /* login@3x.png */; };
@@ -58,6 +66,19 @@
 /* Begin PBXFileReference section */
 		BAE10A0F1B03B9D6B4E5578C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEC0ED5DA487577BAF3A8D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DA2748761AC6D74C00A5D136 /* AccompagnementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccompagnementViewController.h; sourceTree = "<group>"; };
+		DA2748771AC6D74C00A5D136 /* AccompagnementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccompagnementViewController.m; sourceTree = "<group>"; };
+		DA27487B1AC6DCFC00A5D136 /* UIView+esante.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+esante.h"; sourceTree = "<group>"; };
+		DA27487C1AC6DCFC00A5D136 /* UIView+esante.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+esante.m"; sourceTree = "<group>"; };
+		DA27487E1AC6DD7600A5D136 /* HeaderAccompagnementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderAccompagnementView.h; sourceTree = "<group>"; };
+		DA27487F1AC6DD7600A5D136 /* HeaderAccompagnementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderAccompagnementView.m; sourceTree = "<group>"; };
+		DA2748811AC6DEC200A5D136 /* HeaderAccompagnementView~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "HeaderAccompagnementView~iphone.xib"; sourceTree = "<group>"; };
+		DA2748831AC6E28600A5D136 /* EditCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditCellView.xib; sourceTree = "<group>"; };
+		DA2748851AC6E44C00A5D136 /* EditCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCellView.h; sourceTree = "<group>"; };
+		DA2748861AC6E44C00A5D136 /* EditCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCellView.m; sourceTree = "<group>"; };
+		DA2748881AC6F1BB00A5D136 /* LabelPickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelPickerTableViewCell.h; sourceTree = "<group>"; };
+		DA2748891AC6F1BB00A5D136 /* LabelPickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelPickerTableViewCell.m; sourceTree = "<group>"; };
+		DA27488A1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelPickerTableViewCell.xib; sourceTree = "<group>"; };
 		DA7D1E691AC60A3200C0E083 /* MaCommunaute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaCommunaute.h; sourceTree = "<group>"; };
 		DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaCommunaute.m; sourceTree = "<group>"; };
 		DA7D1E6D1AC611A800C0E083 /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
@@ -148,6 +169,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA2748791AC6DC0500A5D136 /* accompagnement */ = {
+			isa = PBXGroup;
+			children = (
+				DA2748761AC6D74C00A5D136 /* AccompagnementViewController.h */,
+				DA2748771AC6D74C00A5D136 /* AccompagnementViewController.m */,
+				DA27487E1AC6DD7600A5D136 /* HeaderAccompagnementView.h */,
+				DA27487F1AC6DD7600A5D136 /* HeaderAccompagnementView.m */,
+				DA2748811AC6DEC200A5D136 /* HeaderAccompagnementView~iphone.xib */,
+				DA2748831AC6E28600A5D136 /* EditCellView.xib */,
+				DA2748851AC6E44C00A5D136 /* EditCellView.h */,
+				DA2748861AC6E44C00A5D136 /* EditCellView.m */,
+				DA2748881AC6F1BB00A5D136 /* LabelPickerTableViewCell.h */,
+				DA2748891AC6F1BB00A5D136 /* LabelPickerTableViewCell.m */,
+				DA27488A1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib */,
+			);
+			name = accompagnement;
+			sourceTree = "<group>";
+		};
+		DA27487A1AC6DCD000A5D136 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				DA27487B1AC6DCFC00A5D136 /* UIView+esante.h */,
+				DA27487C1AC6DCFC00A5D136 /* UIView+esante.m */,
+			);
+			name = categories;
+			sourceTree = "<group>";
+		};
 		DA7D1E6C1AC60AE600C0E083 /* menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +243,7 @@
 		DA7FB88F1ABE16FF004A6FFA /* e-sante-hack */ = {
 			isa = PBXGroup;
 			children = (
+				DA27487A1AC6DCD000A5D136 /* categories */,
 				DA7FB8B91ABE2E4B004A6FFA /* controllers */,
 				DA7D1E851AC6AA6800C0E083 /* Utils.h */,
 				DA7D1E861AC6AA6800C0E083 /* Utils.m */,
@@ -249,6 +298,7 @@
 				DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */,
 				DA7D1E691AC60A3200C0E083 /* MaCommunaute.h */,
 				DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */,
+				DA2748791AC6DC0500A5D136 /* accompagnement */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -367,15 +417,18 @@
 				DA7D1E8B1AC6AC4300C0E083 /* produits.m4a in Resources */,
 				DA7D1E8C1AC6AC4300C0E083 /* conseils.m4a in Resources */,
 				DA7D1E8D1AC6AC4300C0E083 /* communaute.m4a in Resources */,
+				DA27488C1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib in Resources */,
 				DA7D1E8E1AC6AC4300C0E083 /* accompagnement.m4a in Resources */,
 				DA7D1E8F1AC6AC4300C0E083 /* rapport.m4a in Resources */,
 				DA7D1E901AC6AC4300C0E083 /* voice_over.m4a in Resources */,
 				DA7D1E911AC6AC4300C0E083 /* accessibilite.m4a in Resources */,
+				DA2748841AC6E28600A5D136 /* EditCellView.xib in Resources */,
 				DA7D1E921AC6AC4300C0E083 /* alerte.m4a in Resources */,
 				DA7D1E931AC6AC4300C0E083 /* open_menu.m4a in Resources */,
 				DA7D1E941AC6AC4300C0E083 /* welcome.m4a in Resources */,
 				DA7FB8E11ABE41AC004A6FFA /* logo_novartis@3x.png in Resources */,
 				DA7FB8EC1ABF07D3004A6FFA /* hamburger@2x.png in Resources */,
+				DA2748821AC6DEC200A5D136 /* HeaderAccompagnementView~iphone.xib in Resources */,
 				DA7FB89C1ABE16FF004A6FFA /* Main.storyboard in Resources */,
 				DA7D1E701AC611A800C0E083 /* login@3x.png in Resources */,
 				DA7FB8ED1ABF07D3004A6FFA /* hamburger@3x.png in Resources */,
@@ -432,15 +485,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2748781AC6D74C00A5D136 /* AccompagnementViewController.m in Sources */,
 				DA7FB8E61ABEFA12004A6FFA /* PrefixHeader.pch in Sources */,
+				DA27488B1AC6F1BB00A5D136 /* LabelPickerTableViewCell.m in Sources */,
 				DA7FB8E91ABF02FB004A6FFA /* CommonViewController.m in Sources */,
 				DA7FB8BC1ABE39DC004A6FFA /* OurProductViewController.m in Sources */,
 				DA7D1E871AC6AA6800C0E083 /* Utils.m in Sources */,
 				DA7FB8B81ABE2E32004A6FFA /* MenuTableViewController.m in Sources */,
 				DA7FB8991ABE16FF004A6FFA /* MainViewController.m in Sources */,
+				DA2748871AC6E44C00A5D136 /* EditCellView.m in Sources */,
 				DA7FB8F01ABF0861004A6FFA /* HomeViewController.m in Sources */,
+				DA27487D1AC6DCFC00A5D136 /* UIView+esante.m in Sources */,
 				DA7FB8961ABE16FF004A6FFA /* AppDelegate.m in Sources */,
 				DA7D1E6B1AC60A3200C0E083 /* MaCommunaute.m in Sources */,
+				DA2748801AC6DD7600A5D136 /* HeaderAccompagnementView.m in Sources */,
 				DA7D1E971AC6C35D00C0E083 /* TestAcuiteViewController.m in Sources */,
 				DA7FB8BF1ABE3EC5004A6FFA /* MenuTableViewCell.m in Sources */,
 				DA7FB8931ABE16FF004A6FFA /* main.m in Sources */,

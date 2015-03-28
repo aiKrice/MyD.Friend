@@ -85,8 +85,6 @@
 	TestAcuiteViewController *testVC = [storyboard instantiateViewControllerWithIdentifier:@"TestAcuiteViewController"];
 	testVC.delegate = self;
 	[self.navigationController presentViewController:testVC animated:YES completion:nil];
-	
-	
 }
 
 -(void) getResult:(int)result{

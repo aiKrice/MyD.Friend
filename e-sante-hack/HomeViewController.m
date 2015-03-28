@@ -8,13 +8,30 @@
 
 #import "HomeViewController.h"
 
+@interface HomeViewController()
+
+@property (weak, nonatomic) IBOutlet UIWebView *webview;
+
+
+@end
+
 @implementation HomeViewController
 
 -(void) viewDidLoad{
 	[super viewDidLoad];
-	[Utils play:@""];
+
+	NSURL *url = [NSURL URLWithString:@"http://10.10.10.53:3000/history/graph"];
+	NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
+	
+	[self.webview loadRequest:req];
+	
+	
+	
 }
 	
+- (IBAction)refresh:(id)sender {
+	[self.webview reload];
+}
 
 
 @end
