@@ -13,7 +13,9 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var community = require('./routes/landing_community');
+var product = require('./routes/landing_product');
+var history = require('./routes/history');
 
 var app = express();
 
@@ -30,7 +32,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/landing-community', community);
+app.use('/landing-product', product);
+app.use('/history', history);
+
 // Connect to our mongo database
 mongoose.connect('mongodb://localhost/eSante', function (err) {
     console.log("Connected to database");
