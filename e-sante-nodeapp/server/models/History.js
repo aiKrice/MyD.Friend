@@ -40,6 +40,16 @@ schema.statics.findByType = function (type, callback) {
     });
 };
 
+schema.statics.findTypes = function (callback) {
+    var types = [];
+    History.distinct('type', function (err, docs) {
+        if (!err) {
+            types = docs;
+        }
+        callback(types);
+    });
+};
+
 schema.pre('save', function (next) {
     var now = new Date();
     this.updated_at = now;
