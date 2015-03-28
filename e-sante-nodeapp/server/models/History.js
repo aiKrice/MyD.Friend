@@ -27,6 +27,15 @@ schema.statics.getPoints = function (callback) {
     });
 };
 
+schema.pre('save', function (next) {
+    var now = new Date();
+    this.updated_at = now;
+    if (!this.created_at) {
+        this.created_at = now;
+    }
+    next();
+});
+
 var History = mongoose.model('History', schema);
 
 module.exports = History;
