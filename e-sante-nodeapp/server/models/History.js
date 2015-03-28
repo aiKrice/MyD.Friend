@@ -8,7 +8,10 @@ var mongoose = require('mongoose');
 
 // Create a new schema for our History data
 var schema = new mongoose.Schema({
-    value: String
+    type: String,
+    value: String,
+    created_at: Date,
+    updated_at: Date
 });
 
 schema.statics.getPoints = function (callback) {
