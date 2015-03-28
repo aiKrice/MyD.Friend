@@ -27,6 +27,19 @@ schema.statics.getDatas = function (callback) {
     });
 };
 
+schema.statics.findByType = function (type, callback) {
+    var points = [];
+
+    History.find({type: type}, function (err, docs) {
+        // If everything is cool...
+        if (!err) {
+            points = docs;
+        }
+        // Pass them back to the specified callback
+        callback(points);
+    });
+};
+
 schema.pre('save', function (next) {
     var now = new Date();
     this.updated_at = now;
