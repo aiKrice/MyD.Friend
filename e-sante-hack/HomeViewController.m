@@ -10,4 +10,11 @@
 
 @implementation HomeViewController
 
+-(void) viewDidLoad{
+	[super viewDidLoad];
+	[Utils play:@""];
+}
+	
+
+
 @end

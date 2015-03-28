@@ -1,10 +1,13 @@
 PODS:
+  - AFSoundManager (2.1)
   - RESideMenu (4.0.7)
 
 DEPENDENCIES:
+  - AFSoundManager (~> 2.1)
   - RESideMenu (~> 4.0.7)
 
 SPEC CHECKSUMS:
+  AFSoundManager: 30d85384fb2d96b8a4635fd703bafadb7c75f4ba
   RESideMenu: a9c1cd2e64e60e1d3166ddac01a83e215a0e4d30
 
 COCOAPODS: 0.35.0

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestAcuiteViewController.h"
 
-@interface AccessibilityViewController : UIViewController
+@interface AccessibilityViewController : CommonViewController<UIGestureRecognizerDelegate, AcuiteDelegate>
 
 @end

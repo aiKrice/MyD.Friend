@@ -35,8 +35,7 @@
 	
 	self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentViewController"];
 	self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
-	
-	//self.delegate = self;
+	[Utils play:@"welcome.m4a"];
 }
 
 @end

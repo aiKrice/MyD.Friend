@@ -47,18 +47,21 @@
 	
 	
 	if (indexPath.row == 0){//RAPPORT
-		
+		[Utils play:@"rapport.m4a"];
 	} else if (indexPath.row == 1){//Accessibilite
 		vc = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"AccessibilityViewController"]];
+		[Utils play:@"accessibilite.m4a"];
 		
 	} else if (indexPath.row == 2){//Accompagnement
-		
+		[Utils play:@"accompagnement.m4a"];
 	} else if (indexPath.row == 3){//Ma communauté
 	vc = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"MaCommunaute"]];
+		[Utils play:@"communaute.m4a"];
 	} else if (indexPath.row == 4){//Conseils
-		
+		[Utils play:@"conseils.m4a"];
 	} else { //Nos produits de demain
 		vc = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"OurProductViewController"]];
+		[Utils play:@"produits.m4a"];
 	}
 	[self.sideMenuViewController setContentViewController:vc animated:YES];
 	[self.sideMenuViewController hideMenuViewController];

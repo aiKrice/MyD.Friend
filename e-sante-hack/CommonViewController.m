@@ -24,6 +24,7 @@
 
 -(void) didTouchMenuButton{
 	[self.sideMenuViewController presentLeftMenuViewController];
+	[Utils play:@"open_menu.m4a"];
 }
 
 @end
