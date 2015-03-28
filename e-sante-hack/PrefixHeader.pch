@@ -15,4 +15,5 @@
 
 #import "Constants.h"
 #import "CommonViewController.h"
+#import <RESideMenu/RESideMenu.h>
 #endif

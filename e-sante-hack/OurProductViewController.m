@@ -17,8 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.navigationItem.title = @"Nos produits de demain";
+	
     // Do any additional setup after loading the view.
-	NSURL *url = [NSURL URLWithString:@"http://www.medecingeek.com/category/objets-connectes/"];
+	//NSURL *url = [NSURL URLWithString:@"http://www.medecingeek.com/category/objets-connectes/"];
+	NSURL *url = [NSURL URLWithString:@"http://www.sanofi.com/"];
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
 	[self.webview loadRequest:request];
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		66D0D0C8F4F61DCE163DB38A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE10A0F1B03B9D6B4E5578C /* libPods.a */; };
+		DA7D1E6B1AC60A3200C0E083 /* MaCommunaute.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */; };
+		DA7D1E6F1AC611A800C0E083 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7D1E6D1AC611A800C0E083 /* login@2x.png */; };
+		DA7D1E701AC611A800C0E083 /* login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7D1E6E1AC611A800C0E083 /* login@3x.png */; };
+		DA7D1E771AC6248600C0E083 /* AccessibilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D1E761AC6248600C0E083 /* AccessibilityViewController.m */; };
 		DA7FB8931ABE16FF004A6FFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8921ABE16FF004A6FFA /* main.m */; };
 		DA7FB8961ABE16FF004A6FFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8951ABE16FF004A6FFA /* AppDelegate.m */; };
 		DA7FB8991ABE16FF004A6FFA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8981ABE16FF004A6FFA /* MainViewController.m */; };
@@ -39,6 +43,12 @@
 /* Begin PBXFileReference section */
 		BAE10A0F1B03B9D6B4E5578C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEC0ED5DA487577BAF3A8D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DA7D1E691AC60A3200C0E083 /* MaCommunaute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaCommunaute.h; sourceTree = "<group>"; };
+		DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaCommunaute.m; sourceTree = "<group>"; };
+		DA7D1E6D1AC611A800C0E083 /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
+		DA7D1E6E1AC611A800C0E083 /* login@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@3x.png"; sourceTree = "<group>"; };
+		DA7D1E751AC6248600C0E083 /* AccessibilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessibilityViewController.h; sourceTree = "<group>"; };
+		DA7D1E761AC6248600C0E083 /* AccessibilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessibilityViewController.m; sourceTree = "<group>"; };
 		DA7FB88D1ABE16FF004A6FFA /* e-sante-hack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-sante-hack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7FB8911ABE16FF004A6FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA7FB8921ABE16FF004A6FFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +116,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA7D1E6C1AC60AE600C0E083 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				DA7FB8971ABE16FF004A6FFA /* MainViewController.h */,
+				DA7FB8981ABE16FF004A6FFA /* MainViewController.m */,
+				DA7FB8B61ABE2E32004A6FFA /* MenuTableViewController.h */,
+				DA7FB8B71ABE2E32004A6FFA /* MenuTableViewController.m */,
+				DA7FB8BD1ABE3EC5004A6FFA /* MenuTableViewCell.h */,
+				DA7FB8BE1ABE3EC5004A6FFA /* MenuTableViewCell.m */,
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
 		DA7FB8841ABE16FF004A6FFA = {
 			isa = PBXGroup;
 			children = (
@@ -171,18 +194,17 @@
 		DA7FB8B91ABE2E4B004A6FFA /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DA7FB8971ABE16FF004A6FFA /* MainViewController.h */,
-				DA7FB8981ABE16FF004A6FFA /* MainViewController.m */,
-				DA7FB8B61ABE2E32004A6FFA /* MenuTableViewController.h */,
-				DA7FB8B71ABE2E32004A6FFA /* MenuTableViewController.m */,
+				DA7D1E6C1AC60AE600C0E083 /* menu */,
 				DA7FB8BA1ABE39DC004A6FFA /* OurProductViewController.h */,
 				DA7FB8BB1ABE39DC004A6FFA /* OurProductViewController.m */,
-				DA7FB8BD1ABE3EC5004A6FFA /* MenuTableViewCell.h */,
-				DA7FB8BE1ABE3EC5004A6FFA /* MenuTableViewCell.m */,
 				DA7FB8E71ABF02FB004A6FFA /* CommonViewController.h */,
 				DA7FB8E81ABF02FB004A6FFA /* CommonViewController.m */,
 				DA7FB8EE1ABF0861004A6FFA /* HomeViewController.h */,
 				DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */,
+				DA7D1E691AC60A3200C0E083 /* MaCommunaute.h */,
+				DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */,
+				DA7D1E751AC6248600C0E083 /* AccessibilityViewController.h */,
+				DA7D1E761AC6248600C0E083 /* AccessibilityViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -190,6 +212,8 @@
 		DA7FB8DF1ABE41AC004A6FFA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DA7D1E6D1AC611A800C0E083 /* login@2x.png */,
+				DA7D1E6E1AC611A800C0E083 /* login@3x.png */,
 				DA7FB8EA1ABF07D3004A6FFA /* hamburger@2x.png */,
 				DA7FB8EB1ABF07D3004A6FFA /* hamburger@3x.png */,
 				DA7FB8E21ABE42DB004A6FFA /* logo_novartis@2x.png */,
@@ -283,7 +307,9 @@
 				DA7FB8E11ABE41AC004A6FFA /* logo_novartis@3x.png in Resources */,
 				DA7FB8EC1ABF07D3004A6FFA /* hamburger@2x.png in Resources */,
 				DA7FB89C1ABE16FF004A6FFA /* Main.storyboard in Resources */,
+				DA7D1E701AC611A800C0E083 /* login@3x.png in Resources */,
 				DA7FB8ED1ABF07D3004A6FFA /* hamburger@3x.png in Resources */,
+				DA7D1E6F1AC611A800C0E083 /* login@2x.png in Resources */,
 				DA7FB8E31ABE42DB004A6FFA /* logo_novartis@2x.png in Resources */,
 				DA7FB89E1ABE16FF004A6FFA /* Images.xcassets in Resources */,
 			);
@@ -343,8 +369,10 @@
 				DA7FB8991ABE16FF004A6FFA /* MainViewController.m in Sources */,
 				DA7FB8F01ABF0861004A6FFA /* HomeViewController.m in Sources */,
 				DA7FB8961ABE16FF004A6FFA /* AppDelegate.m in Sources */,
+				DA7D1E6B1AC60A3200C0E083 /* MaCommunaute.m in Sources */,
 				DA7FB8BF1ABE3EC5004A6FFA /* MenuTableViewCell.m in Sources */,
 				DA7FB8931ABE16FF004A6FFA /* main.m in Sources */,
+				DA7D1E771AC6248600C0E083 /* AccessibilityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

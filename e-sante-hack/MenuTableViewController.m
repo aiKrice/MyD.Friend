@@ -42,19 +42,26 @@
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+	UIViewController *vc;
+	
+	
 	if (indexPath.row == 0){//RAPPORT
 		
 	} else if (indexPath.row == 1){//Accessibilite
+		vc = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"AccessibilityViewController"]];
 		
 	} else if (indexPath.row == 2){//Accompagnement
 		
 	} else if (indexPath.row == 3){//Ma communauté
-	
+	vc = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"MaCommunaute"]];
 	} else if (indexPath.row == 4){//Conseils
 		
 	} else { //Nos produits de demain
-		
+		vc = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"OurProductViewController"]];
 	}
+	[self.sideMenuViewController setContentViewController:vc animated:YES];
+	[self.sideMenuViewController hideMenuViewController];
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
