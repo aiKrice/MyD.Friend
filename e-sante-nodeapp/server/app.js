@@ -103,7 +103,7 @@ app.get('/history/create', function (req, res, next) {
 /* POST history. */
 app.post('/history/create', function (req, res, next) {
 
-    if (parseInt(req.body.glycemie, 10) >= 10) {
+    if (parseInt(req.body.glycemie, 10) >= 1.3) {
         setTimeout(function () {
 
             var api_key = 'key-4fa91a6168a7cb1b50bf3d56640789c9';
