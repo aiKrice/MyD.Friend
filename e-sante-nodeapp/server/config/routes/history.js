@@ -9,7 +9,7 @@ var router = express.Router();
 var log = require('log');
 var History = require('../../models/History');
 var clients = require('../../services/sockets');
-var nodemailer = require('nodemailer'),
+var Mailgun = require('mailgun-js'),
     fs = require('fs');
 
 /* GET history page. */
@@ -45,74 +45,68 @@ router.get('/graph', function (req, res, next) {
 });
 
 /* POST history. */
-
 router.post('/create', function (req, res, next) {
-    var data = req.body.type,
-        value = req.body.value;
 
-    // Construct a new history object
-    var history = {
-        type: data,
-        value: value
-    };
 
     if (parseInt(req.body.glycemie, 10) > 10) {
-        getReportContent();
+        setTimeout(function () {
+
+            var api_key = 'key-4fa91a6168a7cb1b50bf3d56640789c9';
+
+            var domain = 'sandbox3fe0d2ae3766434586acb2d64b19c437.mailgun.org';
+
+            var from_who = 'contact@mydpartner.com';
+
+            var path = require("path");
+            var fp = path.join(__dirname, '/../../public/images/report.png');
+            //Settings
+            var mailgun = new Mailgun({apiKey: api_key, domain: domain});
+
+            var data = {
+                from: from_who,
+                to: "ludovic.zamord@gmail.com",
+                subject: 'Anomalie détectée',
+                text: 'Content',
+                attachment: fp
+            };
+
+            //Sending the email with attachment
+            mailgun.messages().send(data, function (error, body) {
+                if (error) {
+                    console.log(error);
+                    res.render('error', {error: error});
+                }
+                else {
+                    res.send();
+                    console.log("attachment sent", fp);
+                }
+            });
+        }, 30);
+    }
+    else {
+        var data = req.body.type,
+            value = req.body.value;
+
+        // Construct a new history object
+        var history = {
+            type: data,
+            value: value
+        };
+        // Create a new model instance with our object
+        var historyEntry = new History(history);
+
+        // Save 'er to the database
+        historyEntry.save(function (err) {
+            if (!err) {
+                // If everything is cool, socket.io emits the history data.
+                clients.sockets.emit('history', req.body);
+            }
+            log(err);
+        });
     }
 
-    // Create a new model instance with our object
-    var historyEntry = new History(history);
 
-    // Save 'er to the database
-    historyEntry.save(function (err) {
-        if (!err) {
-            // If everything is cool, socket.io emits the history data.
-            clients.sockets.emit('history', req.body);
-        }
-        log(err);
-    });
 });
-
-
-
-
-
-function getReportContent() {
-    console.log("Getting report content");
-    fs.readFile("/images/report.png", function (err, data) {
-        sendIt(data);
-    });
-}
-
-function sendIt(data){
-    // create reusable transporter object using SMTP transport
-    var transporter = nodemailer.createTransport({
-        service: 'Gmail',
-
-    });
-
-    // NB! No need to recreate the transporter object. You can use
-    // the same transporter object for all e-mails
-
-    // setup e-mail data with unicode symbols
-    var mailOptions = {
-        from: 'Fred Foo ✔ <test@super.com>', // sender address
-        to: 'ludaavitch@gmail.com', // list of receivers
-        subject: 'Hello ✔', // Subject line
-        text: 'Hello world ✔', // plaintext body
-        html: '<b>Hello world ✔</b>', // html body
-        attachments: [{'filename': 'report.png', 'contents': data}]
-    };
-    console.log("Will send mail");
-    // send mail with defined transport object
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log('Message sent: ' + info.response);
-        }
-    });
-}
 
 
 module.exports = router;
