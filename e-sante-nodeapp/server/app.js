@@ -9,7 +9,8 @@ var express = require('express'),
     favicon = require('serve-favicon'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    serveStatic = require('serve-static');
 
 var app = express();
 
@@ -23,10 +24,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+app.use(serveStatic('public/static', {'index': ['default.html', 'default.htm']}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Load routes
 require('./config/routes')(app);
-
 
 module.exports = app;
