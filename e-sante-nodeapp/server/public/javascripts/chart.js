@@ -5,7 +5,16 @@
                 renderTo: 'container',
                 defaultSeriesType: 'line'
             },
-            xAxis: {},
+            xAxis: {
+                //lineWidth: 0,
+                //minorGridLineWidth: 0,
+                //lineColor: 'transparent',
+                //labels: {
+                //    enabled: false
+                //},
+                //minorTickLength: 0,
+                //tickLength: 0
+            },
             yAxis: {
                 min: 0,
                 height: 200
@@ -13,16 +22,11 @@
             exporting: {enabled: false},
             credits : {enabled:false},
             legend: {
-                //align: 'left',
-                //verticalAlign: 'top',
-                //floating: true,
                 layout: 'vertical',
-                backgroundColor: '#FFFFFF',
-                lineHeight : 10,
-                style: {
-                    left: '100px',
-                    bottom: 'auto'
-                }
+                align: 'right',
+                verticalAlign: 'top',
+                floating: true,
+                backgroundColor: '#FFFFFF'
             },
             title:{
                 text:''
@@ -59,15 +63,16 @@
         });
 
         socket.on('history', function (data) {
-            console.log(data.glycemie);
-            var x = (new Date()).getTime(), // current time
-                glycemie = parseInt(data.glycemie,10);
+            if(data.glycemie){
+                var x = (new Date()).getTime(), // current time
+                    glycemie = parseInt(data.glycemie,10);
                 temperature = parseInt(data.temperature,10);
                 frequence = parseInt(data.frequence,10);
 
-            chart.series[0].addPoint(glycemie, true, true, true);
-            chart.series[1].addPoint(temperature, true, true, true);
-            chart.series[2].addPoint(frequence, true, true, true);
+                chart.series[0].addPoint(glycemie, true, true, true);
+                chart.series[1].addPoint(temperature, true, true, true);
+                chart.series[2].addPoint(frequence, true, true, true);
+            }
 
             //chart.redraw();
         });

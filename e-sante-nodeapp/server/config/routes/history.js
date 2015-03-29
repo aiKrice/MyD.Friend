@@ -11,28 +11,11 @@ var History = require('../../models/History');
 var clients = require('../../services/sockets');
 var Mailgun = require('mailgun-js'),
     fs = require('fs');
+var io = require('socket.io');
 
 /* GET history page. */
 router.get('/', function (req, res, next) {
     res.render('history', {title: 'Landing community page'});
-});
-
-/* GET history page. */
-router.get('/create', function (req, res, next) {
-    History.getDatas(function (points) {
-        res.render('history', {
-            history: JSON.stringify(points) // Pass current state to client side
-        });
-    });
-});
-
-/* GET history update data */
-router.get('/get-data', function (req, res, next) {
-    History.getDatas(function (points) {
-        res.render('history', {
-            history: JSON.stringify(points) // Pass current state to client side
-        });
-    });
 });
 
 /* GET history graph page. */
@@ -44,10 +27,17 @@ router.get('/graph', function (req, res, next) {
     });
 });
 
+/* GET history page. */
+router.get('/create', function (req, res, next) {
+    History.getDatas(function (points) {
+        res.render('history', {
+            history: JSON.stringify(points) // Pass current state to client side
+        });
+    });
+});
+
 /* POST history. */
 router.post('/create', function (req, res, next) {
-
-
     if (parseInt(req.body.glycemie, 10) > 10) {
         setTimeout(function () {
 
@@ -81,7 +71,7 @@ router.post('/create', function (req, res, next) {
                     console.log("attachment sent", fp);
                 }
             });
-        }, 30);
+        }, 2);
     }
     else {
         var data = req.body.type,
@@ -93,19 +83,20 @@ router.post('/create', function (req, res, next) {
             value: value
         };
         // Create a new model instance with our object
-        var historyEntry = new History(history);
+        //var historyEntry = new History(history);
+        //
+        //// Save 'er to the database
+        //historyEntry.save(function (err) {
+        //    if (!err) {
+        //        // If everything is cool, socket.io emits the history data.
+        //        clients.sockets.emit('history', req.body);
+        //    }
+        //    log(err);
+        //});
 
-        // Save 'er to the database
-        historyEntry.save(function (err) {
-            if (!err) {
-                // If everything is cool, socket.io emits the history data.
-                clients.sockets.emit('history', req.body);
-            }
-            log(err);
-        });
+
+        //clients.sockets.emit('history', req.body);
     }
-
-
 });
 
 

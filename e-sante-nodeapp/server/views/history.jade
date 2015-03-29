@@ -2,7 +2,7 @@ extends layout
 block content
     div.container
         div.row
-            form.form.form-inline(action="/history/create", method="post")
+            form.form.form-inline(action="  /create", method="post")
                 div.form-group.col-xs-12.col-sm-6.col-lg-3
                     label.col-xs-4 Glycemie:
                     div.col-xs-8
@@ -30,3 +30,4 @@ block content
                         input.form-control(id="frequence", value="6", type="text", name="value", placeholder="0.5")
                 div.form-group.col-xs-12.col-sm-6.col-lg-3
                     button.btn.btn-default.col-xs-8.col-xs-offset-4(type="submit", id="submit-data") Submit
+                    button.btn.btn-default.col-xs-8.col-xs-offset-4(type="submit", id="apparage") Apparage

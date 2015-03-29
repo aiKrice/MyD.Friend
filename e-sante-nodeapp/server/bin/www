@@ -18,19 +18,29 @@ var app = require('../app'),
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-db.connect(function () {
-    log(null,'Connected to mongodb server'.green);
-    var server = app.listen(app.get('port'), function () {
-        if (server){
-            log(null,'Express server listening on port '.green + server.address().port);
-            // connect websockets
-            return sockets(server);
-        }
-        log("Express server not connected");
-    });
-    server.on('error', onError.bind(server));
-    server.on('listening', onListening.bind(server));
+var server = app.listen(app.get('port'), function () {
+    if (server) {
+        log(null, 'Express server listening on port '.green + server.address().port);
+        // connect websockets
+        return sockets(server);
+    }
+    log("Express server not connected");
 });
+
+
+//db.connect(function () {
+//    log(null,'Connected to mongodb server'.green);
+//    var server = app.listen(app.get('port'), function () {
+//        if (server){
+//            log(null,'Express server listening on port '.green + server.address().port);
+//            // connect websockets
+//            return sockets(server);
+//        }
+//        log("Express server not connected");
+//    });
+//    server.on('error', onError.bind(server));
+//    server.on('listening', onListening.bind(server));
+//});
 
 
 /**
