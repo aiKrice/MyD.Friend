@@ -1,0 +1,14 @@
+{
+  "name": "e-sante-nodeapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "auto-reload-brunch": "^1.7.8",
+    "jade-brunch": "^1.8.1",
+    "javascript-brunch": "^1.7.1",
+    "object-assign": "^2.0.0",
+    "react-brunch": "git+ssh://git@github.com:mattmccray/react-brunch.git",
+    "sass-brunch": "^1.8.9",
+    "socket.io": "^1.3.5"
+  }
+}

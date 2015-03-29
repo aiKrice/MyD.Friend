@@ -28,3 +28,10 @@ DerivedData
 .DS_Store
 
 postmortem autolayout.rtf
+
+.idea/*
+e-sante-nodeapp/node_modules
+e-sante-nodeapp/bower_components
+e-sante-nodeapp/server/node_modules
+e-sante-nodeapp/bower_components
+e-sante-nodeapp/public
