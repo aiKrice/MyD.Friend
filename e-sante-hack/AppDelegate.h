@@ -14,6 +14,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (assign, nonatomic) BOOL isRdv;
+@property (assign, nonatomic) BOOL isAlerte;
 
 
 @end

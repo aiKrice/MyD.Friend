@@ -34,10 +34,20 @@ En pratiquant un sport régulièrement ou une activité physique régulière, on
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"hamburger"] style:UIBarButtonItemStylePlain target:self action:@selector(didTouchMenuButton)];
+	[self.navigationItem setLeftBarButtonItem:leftBarButton];
+	[self.navigationController.navigationBar setTintColor:UIColorFromRGB(0x10C3FF)];
+	self.navigationItem.title = @"CONSEILS";
 	
 	self.pageTitles = @[@"Surveiller votre poids et votre alimentation", @"Avoir une bonne hygiène de vie", @"Les bénéfice d'une activité sportive"];
 	self.pageDetail = @[detail1, detail2, detail3];
 	self.pageImages = @[@"manger.png", @"dormir.png", @"courir.png"];
+	self.dataSource = self;
+	self.delegate = self;
+	
+	 ConseilViewController *startingViewController = [self viewControllerAtIndex:0];
+	 NSArray *viewControllers = @[startingViewController];
+	[self setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 	
     // Do any additional setup after loading the view.
 }
@@ -47,6 +57,10 @@ En pratiquant un sport régulièrement ou une activité physique régulière, on
     // Dispose of any resources that can be recreated.
 }
 
+-(void) didTouchMenuButton{
+	[self.sideMenuViewController presentLeftMenuViewController];
+	[Utils play:@"open_menu.m4a"];
+}
 /*
 #pragma mark - Navigation
 

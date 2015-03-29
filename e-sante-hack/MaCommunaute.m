@@ -19,7 +19,7 @@
 
 -(void) viewDidLoad{
 	[super viewDidLoad];
-	self.navigationItem.title = @"Ma Communauté";
+	self.navigationItem.title = @"MA COMMUNTÉ";
 	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTouchView:)];
 	tap.delegate = self;
 	self.landing.userInteractionEnabled = YES;

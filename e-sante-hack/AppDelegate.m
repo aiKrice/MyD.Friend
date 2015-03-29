@@ -9,9 +9,11 @@
 #import "AppDelegate.h"
 #import "AlertViewController.h"
 #import <SIOSocket/SIOSocket.h>
+#import "HomeViewController.h"
 
 
 @interface AppDelegate ()
+
 
 @property (strong, nonatomic) SIOSocket *socket;
 
@@ -22,29 +24,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+	self.isRdv = false;
+	self.isAlerte = false;
 	[SIOSocket socketWithHost: @"http://10.10.10.53:3000" response: ^(SIOSocket *socket) {
 		self.socket = socket;
-		socket.onConnect = ^(){
-			[self.socket on:@"history" callback: ^(SIOParameterArray *args) {
-				NSDictionary *dict = [args objectAtIndex:0];
-				if ([[dict objectForKey:@"glycemie"] integerValue] > 10){
-					[Utils play:@"anomalie.m4a"];
-					RESideMenu *controller = (RESideMenu*)self.window.rootViewController;
-					UIViewController *controllers = controller.contentViewController;
-					if ([controllers isKindOfClass:[UINavigationController class]]){
-						UINavigationController *nv = (UINavigationController*) controllers;
-						UIStoryboard *s = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-						AlertViewController *alert = [s instantiateViewControllerWithIdentifier:@"AlertViewController"];
-						[nv presentViewController:alert animated:YES completion:nil];
+		[self.socket on:@"history" callback: ^(SIOParameterArray *args) {
+			NSDictionary *dict = [args objectAtIndex:0];
+			if ([dict count] == 0){
+				UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Decouverte d'un objet OpenDiabetePlatform" message:@"Un objet compatible openDiabetePlatform veut se connecter au peripherique pour synchroniser ses données en temps réel" delegate:self cancelButtonTitle:@"Refuser" otherButtonTitles:@"Accepter", nil];
+				[alert show];
+			}else if ([[dict objectForKey:@"glycemie"] integerValue] >= 10){
+				[Utils play:@"anomalie.m4a"];
+				
+				
+				
+				RESideMenu *controller = (RESideMenu*)self.window.rootViewController;
+				UIViewController *controllers = controller.contentViewController;
+				if ([controllers isKindOfClass:[UINavigationController class]]){
+					UINavigationController *nv = (UINavigationController*) controllers;
+					if ([nv.topViewController isKindOfClass:[HomeViewController class]]){
+						HomeViewController* homeVC = (HomeViewController*) nv.topViewController;
+						homeVC.derniereAlerte = @"29 mars 2015";
+						self.isAlerte = true;
 					}
+					
+					
+					UIStoryboard *s = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+					AlertViewController *alert = [s instantiateViewControllerWithIdentifier:@"AlertViewController"];
+					[nv presentViewController:alert animated:YES completion:nil];
 				}
-			 }];
-		};
-		
-		socket.onError = ^(NSDictionary *errorInfo){
-			NSLog(@"Error");
-		};
-		
+			}
+		}];
 
 	}];
 
@@ -55,9 +65,11 @@
 
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+	self.isRdv = true;
 }
 
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void(^)())completionHandler{
+	self.isRdv = true;
 	completionHandler();
 }
 

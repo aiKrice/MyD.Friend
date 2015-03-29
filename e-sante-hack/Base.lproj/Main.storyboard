@@ -124,6 +124,37 @@
                                     <constraint firstAttribute="height" constant="60" id="p62-mf-O6p"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jw0-Pd-WH3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sv1-gX-6fj">
+                                        <rect key="frame" x="0.0" y="60" width="414" height="356"/>
+                                        <string key="text">Bienvenue sur la plateforme de Novartis.
+Découvrez les nouveaux traitements, médicaments et nouvelles technologies et parlez en à votre medecin ou à votre spécialiste.    &gt;Acceder à la plateforme&lt;</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="futur.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="itx-tl-QsZ">
+                                        <rect key="frame" x="8" y="583" width="398" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="xiB-Ew-qhF"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.062745098040000002" green="0.76470588240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="itx-tl-QsZ" secondAttribute="trailing" constant="8" id="3UA-NK-134"/>
+                                    <constraint firstAttribute="bottom" secondItem="itx-tl-QsZ" secondAttribute="bottom" constant="8" id="Gem-0L-QPm"/>
+                                    <constraint firstAttribute="trailing" secondItem="itx-tl-QsZ" secondAttribute="trailing" constant="83" id="jC5-mA-XXg"/>
+                                    <constraint firstItem="itx-tl-QsZ" firstAttribute="leading" secondItem="jw0-Pd-WH3" secondAttribute="leading" constant="8" id="yen-jM-nqO"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jC5-mA-XXg"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -131,7 +162,11 @@
                             <constraint firstAttribute="trailing" secondItem="Heb-0p-vSs" secondAttribute="trailing" id="B2r-A8-crZ"/>
                             <constraint firstItem="Heb-0p-vSs" firstAttribute="top" secondItem="HeK-lU-gmN" secondAttribute="bottom" id="FBa-b1-U2m"/>
                             <constraint firstItem="D9V-ao-gdq" firstAttribute="leading" secondItem="M0g-eS-9pP" secondAttribute="leading" id="HFW-hj-yx9"/>
+                            <constraint firstItem="jw0-Pd-WH3" firstAttribute="top" secondItem="HeK-lU-gmN" secondAttribute="bottom" id="IWv-SV-Axl"/>
+                            <constraint firstItem="EU6-JG-RBI" firstAttribute="top" secondItem="jw0-Pd-WH3" secondAttribute="bottom" id="MfK-BZ-8mg"/>
                             <constraint firstAttribute="trailing" secondItem="D9V-ao-gdq" secondAttribute="trailing" id="WFu-Ht-xoD"/>
+                            <constraint firstAttribute="trailing" secondItem="jw0-Pd-WH3" secondAttribute="trailing" id="XA6-zP-f5f"/>
+                            <constraint firstItem="jw0-Pd-WH3" firstAttribute="leading" secondItem="M0g-eS-9pP" secondAttribute="leading" id="Y6k-dE-OeW"/>
                             <constraint firstItem="Heb-0p-vSs" firstAttribute="leading" secondItem="M0g-eS-9pP" secondAttribute="leading" id="Zsy-ht-fx5"/>
                             <constraint firstItem="D9V-ao-gdq" firstAttribute="top" secondItem="HeK-lU-gmN" secondAttribute="bottom" id="y9J-DV-goD"/>
                         </constraints>
@@ -140,6 +175,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="container" destination="jw0-Pd-WH3" id="Zhs-0f-HQG"/>
                         <outlet property="webview" destination="D9V-ao-gdq" id="7pe-eA-KlL"/>
                     </connections>
                 </viewController>
@@ -160,32 +196,146 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anq-Th-xoB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="255" id="qdp-kH-7MW"/>
+                                    <constraint firstAttribute="height" constant="220" id="qdp-kH-7MW"/>
                                 </constraints>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeW-Oh-O3a">
-                                <rect key="frame" x="184" y="8" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="5Zz-en-DHN"/>
-                                    <constraint firstAttribute="height" constant="30" id="hb8-vu-YSj"/>
-                                </constraints>
-                                <state key="normal" title="Button">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Période de Mai 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lah-ti-gSD">
+                                <rect key="frame" x="128" y="299" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmP-ZL-G1I">
+                                <rect key="frame" x="16" y="329" width="382" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Votre tx moyen de glycémie est de ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="7.4mg/L">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" &lt; 7mg/L">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-8k-34C">
+                                <rect key="frame" x="16" y="370" width="382" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Votre temperature moyenne est de ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="37.4°">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.51256555944055948" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" &lt; 37.6°">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0d-LF-28l">
+                                <rect key="frame" x="16" y="408" width="382" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Nombre pas moyen est de ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="146.863 pas">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" &gt; 180.000 pas">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzJ-bo-Txy">
+                                <rect key="frame" x="16" y="236" width="95" height="30"/>
+                                <state key="normal" title="Semaine">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="refresh:" destination="S2K-Wm-zyU" eventType="touchUpInside" id="Wr8-Ew-aU6"/>
-                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnT-KZ-4wx">
+                                <rect key="frame" x="303" y="236" width="95" height="30"/>
+                                <state key="normal" title="BiMensuel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prochain rendez vous médical : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJU-kG-Dor">
+                                <rect key="frame" x="16" y="464" width="245" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aucun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhG-Mt-O3Y">
+                                <rect key="frame" x="258" y="464" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Derniere alerte médicale :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrj-Gk-oee">
+                                <rect key="frame" x="16" y="508" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aucune" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R46-t4-d4r">
+                                <rect key="frame" x="220" y="508" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzT-Qp-Sce">
+                                <rect key="frame" x="160" y="236" width="95" height="30"/>
+                                <state key="normal" title="Mois">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Anq-Th-xoB" firstAttribute="top" secondItem="xxg-gO-3x5" secondAttribute="bottom" id="7Qs-rk-Kqz"/>
-                            <constraint firstItem="AeW-Oh-O3a" firstAttribute="top" secondItem="xxg-gO-3x5" secondAttribute="bottom" constant="8" id="7jq-6U-42f"/>
                             <constraint firstItem="Anq-Th-xoB" firstAttribute="leading" secondItem="tFx-xv-8Ar" secondAttribute="leading" id="LLo-Ir-SVU"/>
-                            <constraint firstAttribute="centerX" secondItem="AeW-Oh-O3a" secondAttribute="centerX" id="SOZ-vg-lD4"/>
                             <constraint firstAttribute="trailing" secondItem="Anq-Th-xoB" secondAttribute="trailing" id="UXI-ma-AIn"/>
                         </constraints>
                     </view>
@@ -194,6 +344,8 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="dernierRdvLabel" destination="yhG-Mt-O3Y" id="ym5-EL-88B"/>
+                        <outlet property="derniereAlerteLabel" destination="R46-t4-d4r" id="usK-Oc-gT1"/>
                         <outlet property="webview" destination="Anq-Th-xoB" id="VHq-bQ-6q4"/>
                     </connections>
                 </viewController>
@@ -262,6 +414,13 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="PSG-vZ-1tG">
+                                        <rect key="frame" x="87" y="438" width="240" height="234"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="234" id="MUP-Yx-zMt"/>
+                                            <constraint firstAttribute="width" constant="240" id="zzd-Yc-Rc2"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.062745098040000002" green="0.76470588240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -269,11 +428,13 @@
                                     <constraint firstItem="IdW-NP-dLA" firstAttribute="leading" secondItem="7pL-xd-zFf" secondAttribute="trailing" constant="8" id="FKc-Ez-uql"/>
                                     <constraint firstItem="uhB-Mo-Udo" firstAttribute="leading" secondItem="XIu-vg-Uap" secondAttribute="leading" id="TMg-Gz-XcS"/>
                                     <constraint firstAttribute="centerX" secondItem="uhB-Mo-Udo" secondAttribute="centerX" id="Z2k-d2-z6d"/>
+                                    <constraint firstAttribute="bottom" secondItem="PSG-vZ-1tG" secondAttribute="bottom" id="dJ7-ZN-q0x"/>
                                     <constraint firstItem="7pL-xd-zFf" firstAttribute="top" secondItem="XIu-vg-Uap" secondAttribute="top" constant="20" id="eYH-yc-NPS"/>
                                     <constraint firstItem="uhB-Mo-Udo" firstAttribute="top" secondItem="IdW-NP-dLA" secondAttribute="bottom" constant="62" id="eZE-Ri-sUh"/>
                                     <constraint firstAttribute="centerY" secondItem="uhB-Mo-Udo" secondAttribute="centerY" constant="0.5" id="hzn-da-8w8"/>
                                     <constraint firstAttribute="trailing" secondItem="IdW-NP-dLA" secondAttribute="trailing" constant="8" id="jcm-sg-12h"/>
                                     <constraint firstAttribute="trailing" secondItem="uhB-Mo-Udo" secondAttribute="trailing" id="wa1-t8-9VG"/>
+                                    <constraint firstAttribute="centerX" secondItem="PSG-vZ-1tG" secondAttribute="centerX" id="yaW-4B-QzJ"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -979,7 +1140,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="futur.jpg" width="787" height="141"/>
         <image name="login.png" width="42" height="42"/>
+        <image name="logo.png" width="800" height="800"/>
         <image name="logo_novartis.png" width="187" height="33"/>
         <image name="share.png" width="128" height="128"/>
         <image name="warning.png" width="128" height="128"/>

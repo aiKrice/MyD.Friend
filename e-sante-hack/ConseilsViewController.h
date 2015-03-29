@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConseilsViewController : UIPageViewController
+@interface ConseilsViewController : UIPageViewController<UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @end

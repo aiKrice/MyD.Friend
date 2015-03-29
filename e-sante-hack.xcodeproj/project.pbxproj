@@ -61,6 +61,8 @@
 		DA7FB8ED1ABF07D3004A6FFA /* hamburger@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7FB8EB1ABF07D3004A6FFA /* hamburger@3x.png */; };
 		DA7FB8F01ABF0861004A6FFA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */; };
 		DA8E1A0A1AC7B55300A29CC8 /* anomalie.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DA8E1A091AC7B55300A29CC8 /* anomalie.m4a */; };
+		DA8E1A0C1AC7C5BE00A29CC8 /* futur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA8E1A0B1AC7C5BE00A29CC8 /* futur.jpg */; };
+		DA8E1A0E1AC7C91300A29CC8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8E1A0D1AC7C91300A29CC8 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +156,8 @@
 		DA7FB8EE1ABF0861004A6FFA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		DA8E1A091AC7B55300A29CC8 /* anomalie.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = anomalie.m4a; sourceTree = "<group>"; };
+		DA8E1A0B1AC7C5BE00A29CC8 /* futur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = futur.jpg; sourceTree = "<group>"; };
+		DA8E1A0D1AC7C91300A29CC8 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		E571C38B21B52D61025D9BA1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +229,8 @@
 		DA7D1E6C1AC60AE600C0E083 /* menu */ = {
 			isa = PBXGroup;
 			children = (
+				DA7FB8E71ABF02FB004A6FFA /* CommonViewController.h */,
+				DA7FB8E81ABF02FB004A6FFA /* CommonViewController.m */,
 				DA7FB8971ABE16FF004A6FFA /* MainViewController.h */,
 				DA7FB8981ABE16FF004A6FFA /* MainViewController.m */,
 				DA7FB8B61ABE2E32004A6FFA /* MenuTableViewController.h */,
@@ -320,8 +326,6 @@
 				DA2748791AC6DC0500A5D136 /* accompagnement */,
 				DA7FB8BA1ABE39DC004A6FFA /* OurProductViewController.h */,
 				DA7FB8BB1ABE39DC004A6FFA /* OurProductViewController.m */,
-				DA7FB8E71ABF02FB004A6FFA /* CommonViewController.h */,
-				DA7FB8E81ABF02FB004A6FFA /* CommonViewController.m */,
 				DA7FB8EE1ABF0861004A6FFA /* HomeViewController.h */,
 				DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */,
 				DA7D1E691AC60A3200C0E083 /* MaCommunaute.h */,
@@ -339,6 +343,8 @@
 		DA7FB8DF1ABE41AC004A6FFA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DA8E1A0D1AC7C91300A29CC8 /* logo.png */,
+				DA8E1A0B1AC7C5BE00A29CC8 /* futur.jpg */,
 				DA8E1A091AC7B55300A29CC8 /* anomalie.m4a */,
 				DA27489D1AC781EA00A5D136 /* courir.png */,
 				DA27489E1AC781EA00A5D136 /* dormir.png */,
@@ -471,6 +477,7 @@
 				DA7D1E8F1AC6AC4300C0E083 /* rapport.m4a in Resources */,
 				DA7D1E901AC6AC4300C0E083 /* voice_over.m4a in Resources */,
 				DA2748941AC7711600A5D136 /* warning.png in Resources */,
+				DA8E1A0E1AC7C91300A29CC8 /* logo.png in Resources */,
 				DA7D1E911AC6AC4300C0E083 /* accessibilite.m4a in Resources */,
 				DA2748841AC6E28600A5D136 /* EditCellView.xib in Resources */,
 				DA7D1E921AC6AC4300C0E083 /* alerte.m4a in Resources */,
@@ -488,6 +495,7 @@
 				DA7D1E6F1AC611A800C0E083 /* login@2x.png in Resources */,
 				DA7FB8E31ABE42DB004A6FFA /* logo_novartis@2x.png in Resources */,
 				DA7FB89E1ABE16FF004A6FFA /* Images.xcassets in Resources */,
+				DA8E1A0C1AC7C5BE00A29CC8 /* futur.jpg in Resources */,
 				DA2748961AC7764100A5D136 /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

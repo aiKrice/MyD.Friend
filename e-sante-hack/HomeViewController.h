@@ -10,4 +10,8 @@
 
 @interface HomeViewController : CommonViewController
 
+@property (strong,nonatomic) NSString *dernierRdv;
+@property (strong, nonatomic) NSString *derniereAlerte;
+
+
 @end

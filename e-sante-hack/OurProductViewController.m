@@ -10,6 +10,7 @@
 
 @interface OurProductViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
+@property (weak, nonatomic) IBOutlet UIView *container;
 
 @end
 
@@ -17,13 +18,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.navigationItem.title = @"Nos produits de demain";
+	self.navigationItem.title = @"NOS PRODUITS DE DEMAIN";
 	
     // Do any additional setup after loading the view.
 	//NSURL *url = [NSURL URLWithString:@"http://www.medecingeek.com/category/objets-connectes/"];
 	NSURL *url = [NSURL URLWithString:@"http://www.sanofi.com/"];
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
 	[self.webview loadRequest:request];
+	
+	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClose:)];
+	tap.delegate = self;
+	self.container.userInteractionEnabled = YES;
+	[self.container addGestureRecognizer:tap];
+	
+}
+
+-(void) didClose:(UITapGestureRecognizer*) sender{
+	CGRect frame = self.container.frame;
+	frame.origin.y = self.view.frame.size.height;
+	
+	[UIView animateWithDuration:0.5
+						  delay:0
+						options: UIViewAnimationCurveEaseOut
+					 animations:^{
+						 self.container.frame = frame;
+					 }
+					 completion:^(BOOL finished){
+						 NSLog(@"Done!");
+					 }];
 }
 
 - (void)didReceiveMemoryWarning {
