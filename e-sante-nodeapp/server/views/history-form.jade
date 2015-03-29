@@ -1,0 +1,14 @@
+extends layout
+block content
+    div.container-fluid
+        div.row
+            div.col-sm-3.col-md-2.sidebar
+            div.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+                h1.page-header Dashboard
+                div.row.placeholders
+                    form.form-signin(action="/history/create", method="post")
+                        h2.form-signin-heading Data input
+                        input.input-block-level(type="text", name="gly", placeholder="Glycemie")
+                        input.input-block-level(type="text", name="temp", placeholder="Température")
+                        input.input-block-level(type="text", name="fc", placeholder="Fréquence cardiaque")
+                        button.btn.btn-large.btn-primary(type="submit") Submit

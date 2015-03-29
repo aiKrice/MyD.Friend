@@ -1,0 +1,32 @@
+extends layout
+block content
+    div.container
+        div.row
+            form.form.form-inline(action="/history/create", method="post")
+                div.form-group.col-xs-12.col-sm-6.col-lg-3
+                    label.col-xs-4 Glycemie:
+                    div.col-xs-8
+                        input.form-control(id="data-type", type="text", value="tt", name="type", placeholder="Glycemie")
+                div.form-group.col-xs-12.col-sm-6.col-lg-3
+                    label.col-xs-4 Value:
+                    div.col-xs-8
+                        input.form-control(id="glycemie", value="6", type="text", name="value", placeholder="0.5")
+
+                div.form-group.col-xs-12.col-sm-6.col-lg-3
+                    label.col-xs-4 Temperature:
+                    div.col-xs-8
+                        input.form-control(id="data-type", type="text", value="tt", name="type", placeholder="Temperature")
+                div.form-group.col-xs-12.col-sm-6.col-lg-3
+                    label.col-xs-4 Value:
+                    div.col-xs-8
+                        input.form-control(id="temperature", value="6", type="text", name="value", placeholder="0.5")
+                div.form-group.col-xs-12.col-sm-6.col-lg-3
+                    label.col-xs-4 Frequence:
+                    div.col-xs-8
+                        input.form-control(id="", type="text", value="tt", name="type", placeholder="Frequence")
+                div.form-group.col-xs-12.col-sm-6.col-lg-3
+                    label.col-xs-4 Value:
+                    div.col-xs-8
+                        input.form-control(id="frequence", value="6", type="text", name="value", placeholder="0.5")
+                div.form-group.col-xs-12.col-sm-6.col-lg-3
+                    button.btn.btn-default.col-xs-8.col-xs-offset-4(type="submit", id="submit-data") Submit

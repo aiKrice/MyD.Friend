@@ -18,7 +18,6 @@ var app = require('../app'),
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-
 db.connect(function () {
     log(null,'Connected to mongodb server'.green);
     var server = app.listen(app.get('port'), function () {
