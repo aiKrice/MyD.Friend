@@ -181,8 +181,7 @@
 	
 	NSString *string;
 	NSIndexPath *index;
-	if (self.currentIndexPath.section == 3){
-		
+	if (self.currentIndexPath.section == 2){
 		
 		index = [NSIndexPath indexPathForRow:0 inSection:2];
 		EditCellView *cell = (EditCellView*) [self.tableview cellForRowAtIndexPath:index];
@@ -191,11 +190,11 @@
 	} else {
 		index = [NSIndexPath indexPathForRow:0 inSection:3];
 		EditCellView *cell = (EditCellView*) [self.tableview cellForRowAtIndexPath:index];
-		
-		string = [@"Vous avez un rendez chez votre médecin traitement Le Dr." stringByAppendingString:cell.textField.text];
+		EditCellView *cell2 =(EditCellView*) [self.tableview cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:3]];
+		string = [[[@"Vous avez un rendez chez votre médecin traitement Le Dr." stringByAppendingString:cell.textField.text] stringByAppendingString:@"a l'adresse:"] stringByAppendingString:cell2.textField.text];
 	}
 	
-	[Utils displayNotification:[[NSDate date] dateByAddingTimeInterval:10] withMessage:@"Vous avez un rendez chez" sender:self userInfo:@{@"type":@"rdv", @"message":@"veuillez saisir un nouveau RDV"}];
+	[Utils displayNotification:[[NSDate date] dateByAddingTimeInterval:10] withMessage:string sender:self userInfo:@{@"type":@"rdv", @"message":@"veuillez saisir un nouveau RDV"}];
 	
 	
 }

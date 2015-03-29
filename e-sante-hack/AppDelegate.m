@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "AlertViewController.h"
+#import <SIOSocket/SIOSocket.h>
+
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) SIOSocket *socket;
 
 @end
 
@@ -16,15 +21,44 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
-	UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
-	
-	[[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
-	// Override point for customization after application launch.
+
+	[SIOSocket socketWithHost: @"http://10.10.10.53:3000" response: ^(SIOSocket *socket) {
+		self.socket = socket;
+		socket.onConnect = ^(){
+			[self.socket on:@"history" callback: ^(SIOParameterArray *args) {
+				NSDictionary *dict = [args objectAtIndex:0];
+				if ([[dict objectForKey:@"glycemie"] integerValue] > 10){
+					[Utils play:@"anomalie.m4a"];
+					RESideMenu *controller = (RESideMenu*)self.window.rootViewController;
+					UIViewController *controllers = controller.contentViewController;
+					if ([controllers isKindOfClass:[UINavigationController class]]){
+						UINavigationController *nv = (UINavigationController*) controllers;
+						UIStoryboard *s = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+						AlertViewController *alert = [s instantiateViewControllerWithIdentifier:@"AlertViewController"];
+						[nv presentViewController:alert animated:YES completion:nil];
+					}
+				}
+			 }];
+		};
+		
+		socket.onError = ^(NSDictionary *errorInfo){
+			NSLog(@"Error");
+		};
+		
+
+	}];
+
 	return YES;
+
 }
 
+
+
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+}
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void(^)())completionHandler{
+	completionHandler();
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

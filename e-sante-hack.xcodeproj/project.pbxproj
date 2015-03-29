@@ -17,6 +17,14 @@
 		DA27488B1AC6F1BB00A5D136 /* LabelPickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2748891AC6F1BB00A5D136 /* LabelPickerTableViewCell.m */; };
 		DA27488C1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA27488A1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib */; };
 		DA27488F1AC727D500A5D136 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA27488E1AC727D500A5D136 /* HealthKit.framework */; };
+		DA2748921AC766AE00A5D136 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2748911AC766AE00A5D136 /* AlertViewController.m */; };
+		DA2748941AC7711600A5D136 /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = DA2748931AC7711600A5D136 /* warning.png */; };
+		DA2748961AC7764100A5D136 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = DA2748951AC7764100A5D136 /* share.png */; };
+		DA2748991AC7785500A5D136 /* ConseilsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2748981AC7785500A5D136 /* ConseilsViewController.m */; };
+		DA27489C1AC77C5F00A5D136 /* ConseilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27489B1AC77C5F00A5D136 /* ConseilViewController.m */; };
+		DA2748A01AC781EA00A5D136 /* courir.png in Resources */ = {isa = PBXBuildFile; fileRef = DA27489D1AC781EA00A5D136 /* courir.png */; };
+		DA2748A11AC781EA00A5D136 /* dormir.png in Resources */ = {isa = PBXBuildFile; fileRef = DA27489E1AC781EA00A5D136 /* dormir.png */; };
+		DA2748A21AC781EA00A5D136 /* manger.png in Resources */ = {isa = PBXBuildFile; fileRef = DA27489F1AC781EA00A5D136 /* manger.png */; };
 		DA7D1E6B1AC60A3200C0E083 /* MaCommunaute.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */; };
 		DA7D1E6F1AC611A800C0E083 /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7D1E6D1AC611A800C0E083 /* login@2x.png */; };
 		DA7D1E701AC611A800C0E083 /* login@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7D1E6E1AC611A800C0E083 /* login@3x.png */; };
@@ -52,6 +60,7 @@
 		DA7FB8EC1ABF07D3004A6FFA /* hamburger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7FB8EA1ABF07D3004A6FFA /* hamburger@2x.png */; };
 		DA7FB8ED1ABF07D3004A6FFA /* hamburger@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7FB8EB1ABF07D3004A6FFA /* hamburger@3x.png */; };
 		DA7FB8F01ABF0861004A6FFA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */; };
+		DA8E1A0A1AC7B55300A29CC8 /* anomalie.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DA8E1A091AC7B55300A29CC8 /* anomalie.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +91,17 @@
 		DA27488A1AC6F1BB00A5D136 /* LabelPickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelPickerTableViewCell.xib; sourceTree = "<group>"; };
 		DA27488D1AC727D500A5D136 /* e-sante-hack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "e-sante-hack.entitlements"; sourceTree = "<group>"; };
 		DA27488E1AC727D500A5D136 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		DA2748901AC766AE00A5D136 /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		DA2748911AC766AE00A5D136 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
+		DA2748931AC7711600A5D136 /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warning.png; sourceTree = "<group>"; };
+		DA2748951AC7764100A5D136 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		DA2748971AC7785500A5D136 /* ConseilsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConseilsViewController.h; sourceTree = "<group>"; };
+		DA2748981AC7785500A5D136 /* ConseilsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConseilsViewController.m; sourceTree = "<group>"; };
+		DA27489A1AC77C5F00A5D136 /* ConseilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConseilViewController.h; sourceTree = "<group>"; };
+		DA27489B1AC77C5F00A5D136 /* ConseilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConseilViewController.m; sourceTree = "<group>"; };
+		DA27489D1AC781EA00A5D136 /* courir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = courir.png; sourceTree = "<group>"; };
+		DA27489E1AC781EA00A5D136 /* dormir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dormir.png; sourceTree = "<group>"; };
+		DA27489F1AC781EA00A5D136 /* manger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manger.png; sourceTree = "<group>"; };
 		DA7D1E691AC60A3200C0E083 /* MaCommunaute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaCommunaute.h; sourceTree = "<group>"; };
 		DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaCommunaute.m; sourceTree = "<group>"; };
 		DA7D1E6D1AC611A800C0E083 /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
@@ -133,6 +153,7 @@
 		DA7FB8EB1ABF07D3004A6FFA /* hamburger@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburger@3x.png"; sourceTree = "<group>"; };
 		DA7FB8EE1ABF0861004A6FFA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		DA8E1A091AC7B55300A29CC8 /* anomalie.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = anomalie.m4a; sourceTree = "<group>"; };
 		E571C38B21B52D61025D9BA1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -305,6 +326,12 @@
 				DA7FB8EF1ABF0861004A6FFA /* HomeViewController.m */,
 				DA7D1E691AC60A3200C0E083 /* MaCommunaute.h */,
 				DA7D1E6A1AC60A3200C0E083 /* MaCommunaute.m */,
+				DA2748901AC766AE00A5D136 /* AlertViewController.h */,
+				DA2748911AC766AE00A5D136 /* AlertViewController.m */,
+				DA2748971AC7785500A5D136 /* ConseilsViewController.h */,
+				DA2748981AC7785500A5D136 /* ConseilsViewController.m */,
+				DA27489A1AC77C5F00A5D136 /* ConseilViewController.h */,
+				DA27489B1AC77C5F00A5D136 /* ConseilViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -312,6 +339,12 @@
 		DA7FB8DF1ABE41AC004A6FFA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DA8E1A091AC7B55300A29CC8 /* anomalie.m4a */,
+				DA27489D1AC781EA00A5D136 /* courir.png */,
+				DA27489E1AC781EA00A5D136 /* dormir.png */,
+				DA27489F1AC781EA00A5D136 /* manger.png */,
+				DA2748951AC7764100A5D136 /* share.png */,
+				DA2748931AC7711600A5D136 /* warning.png */,
 				DA7D1E781AC6A99600C0E083 /* acuite.m4a */,
 				DA7D1E791AC6A99600C0E083 /* mode_nuit_off.m4a */,
 				DA7D1E7A1AC6A99600C0E083 /* mode_nuit_on.m4a */,
@@ -388,6 +421,9 @@
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = HLTQMHS4VR;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
@@ -425,6 +461,7 @@
 			files = (
 				DA7D1E881AC6AC4300C0E083 /* acuite.m4a in Resources */,
 				DA7D1E891AC6AC4300C0E083 /* mode_nuit_off.m4a in Resources */,
+				DA2748A11AC781EA00A5D136 /* dormir.png in Resources */,
 				DA7D1E8A1AC6AC4300C0E083 /* mode_nuit_on.m4a in Resources */,
 				DA7D1E8B1AC6AC4300C0E083 /* produits.m4a in Resources */,
 				DA7D1E8C1AC6AC4300C0E083 /* conseils.m4a in Resources */,
@@ -433,6 +470,7 @@
 				DA7D1E8E1AC6AC4300C0E083 /* accompagnement.m4a in Resources */,
 				DA7D1E8F1AC6AC4300C0E083 /* rapport.m4a in Resources */,
 				DA7D1E901AC6AC4300C0E083 /* voice_over.m4a in Resources */,
+				DA2748941AC7711600A5D136 /* warning.png in Resources */,
 				DA7D1E911AC6AC4300C0E083 /* accessibilite.m4a in Resources */,
 				DA2748841AC6E28600A5D136 /* EditCellView.xib in Resources */,
 				DA7D1E921AC6AC4300C0E083 /* alerte.m4a in Resources */,
@@ -440,13 +478,17 @@
 				DA7D1E941AC6AC4300C0E083 /* welcome.m4a in Resources */,
 				DA7FB8E11ABE41AC004A6FFA /* logo_novartis@3x.png in Resources */,
 				DA7FB8EC1ABF07D3004A6FFA /* hamburger@2x.png in Resources */,
+				DA2748A01AC781EA00A5D136 /* courir.png in Resources */,
+				DA8E1A0A1AC7B55300A29CC8 /* anomalie.m4a in Resources */,
 				DA2748821AC6DEC200A5D136 /* HeaderAccompagnementView~iphone.xib in Resources */,
+				DA2748A21AC781EA00A5D136 /* manger.png in Resources */,
 				DA7FB89C1ABE16FF004A6FFA /* Main.storyboard in Resources */,
 				DA7D1E701AC611A800C0E083 /* login@3x.png in Resources */,
 				DA7FB8ED1ABF07D3004A6FFA /* hamburger@3x.png in Resources */,
 				DA7D1E6F1AC611A800C0E083 /* login@2x.png in Resources */,
 				DA7FB8E31ABE42DB004A6FFA /* logo_novartis@2x.png in Resources */,
 				DA7FB89E1ABE16FF004A6FFA /* Images.xcassets in Resources */,
+				DA2748961AC7764100A5D136 /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +544,7 @@
 				DA27488B1AC6F1BB00A5D136 /* LabelPickerTableViewCell.m in Sources */,
 				DA7FB8E91ABF02FB004A6FFA /* CommonViewController.m in Sources */,
 				DA7FB8BC1ABE39DC004A6FFA /* OurProductViewController.m in Sources */,
+				DA2748921AC766AE00A5D136 /* AlertViewController.m in Sources */,
 				DA7D1E871AC6AA6800C0E083 /* Utils.m in Sources */,
 				DA7FB8B81ABE2E32004A6FFA /* MenuTableViewController.m in Sources */,
 				DA7FB8991ABE16FF004A6FFA /* MainViewController.m in Sources */,
@@ -514,6 +557,8 @@
 				DA7D1E971AC6C35D00C0E083 /* TestAcuiteViewController.m in Sources */,
 				DA7FB8BF1ABE3EC5004A6FFA /* MenuTableViewCell.m in Sources */,
 				DA7FB8931ABE16FF004A6FFA /* main.m in Sources */,
+				DA2748991AC7785500A5D136 /* ConseilsViewController.m in Sources */,
+				DA27489C1AC77C5F00A5D136 /* ConseilViewController.m in Sources */,
 				DA7D1E771AC6248600C0E083 /* AccessibilityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

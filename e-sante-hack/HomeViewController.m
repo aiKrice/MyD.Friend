@@ -20,7 +20,7 @@
 -(void) viewDidLoad{
 	[super viewDidLoad];
 
-	NSURL *url = [NSURL URLWithString:@"http://10.10.10.53:3000/history/graph"];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/history/graph", kFullUrl]];
 	NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
 	
 	[self.webview loadRequest:req];

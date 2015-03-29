@@ -1,13 +1,16 @@
 PODS:
   - AFSoundManager (2.1)
   - RESideMenu (4.0.7)
+  - SIOSocket (0.2.0)
 
 DEPENDENCIES:
   - AFSoundManager (~> 2.1)
   - RESideMenu (~> 4.0.7)
+  - SIOSocket (~> 0.2.0)
 
 SPEC CHECKSUMS:
   AFSoundManager: 30d85384fb2d96b8a4635fd703bafadb7c75f4ba
   RESideMenu: a9c1cd2e64e60e1d3166ddac01a83e215a0e4d30
+  SIOSocket: 40ebc9f014b9fec4ec595212faaf6f19cf29d1f2
 
 COCOAPODS: 0.35.0

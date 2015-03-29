@@ -59,6 +59,7 @@
 	vc = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"MaCommunaute"]];
 		[Utils play:@"communaute.m4a"];
 	} else if (indexPath.row == 4){//Conseils
+		vc = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"ConseilsViewController"]];
 		[Utils play:@"conseils.m4a"];
 	} else { //Nos produits de demain
 		vc = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"OurProductViewController"]];

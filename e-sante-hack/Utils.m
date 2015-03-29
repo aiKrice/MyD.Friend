@@ -38,6 +38,26 @@
 	localNotification.timeZone = [NSTimeZone defaultTimeZone];
 	localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
 	
+	NSSet *set = nil;
+	if ([[info objectForKey:@"type"] isEqualToString:@"rdv"]){
+		UIMutableUserNotificationAction *action = [[UIMutableUserNotificationAction alloc] init];
+		action.destructive = YES;
+		action.identifier = @"rdv";
+		action.title = @"Planifier un nouveau rendez vous";
+		action.activationMode = UIUserNotificationActivationModeForeground;
+		UIMutableUserNotificationCategory *category = [[UIMutableUserNotificationCategory alloc] init];
+		category.identifier = @"rdv";
+		[category setActions:@[action] forContext:UIUserNotificationActionContextDefault];
+		[category setActions:@[action] forContext:UIUserNotificationActionContextMinimal];
+		localNotification.category = @"rdv";
+		set = [NSSet setWithObject:category];
+	
+	}
+	UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+	UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:set];
+	
+	[[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+	
 	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 	
 	// Request to reload table view data
