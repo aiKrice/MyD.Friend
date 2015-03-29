@@ -17,6 +17,7 @@
             },
             yAxis: {
                 min: 0,
+                title: '',
                 height: 200
             },
             exporting: {enabled: false},
